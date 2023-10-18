@@ -1,0 +1,26 @@
+https://www.nativewind.dev/
+https://www.youtube.com/watch?v=zi4BRIuEryc&list=PLvIpPQPabN8JtF9MLcI2UCcmXMENRgx-U&index=2
+
+https://stackoverflow.com/questions/76688256/getting-error-use-processcss-thencb-to-work-with-async-plugins
+
+yarn add nativewind
+yarn add --dev tailwindcss@3.3.2
+
+npx tailwindcss init
+
+npm i react-native-swiper-flatlist
+
+https://www.npmjs.com/package/react-native-video
+npm i react-native-video
+
+npm i react-native-linear-gradient
+npm install react-native-svg
+
+
+./gradlew assembleRelease
+
+
+
+Getting Error: "Use process(css).then(cb) to work with async plugins"
+yarn add nativewind
+yarn add --dev tailwindcss@3.3.2
