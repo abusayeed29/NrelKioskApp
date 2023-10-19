@@ -3,7 +3,7 @@ import { Dimensions, TouchableOpacity, View } from 'react-native';
 import Ionic from 'react-native-vector-icons/Ionicons';
 import Video from 'react-native-video';
 
-const SingleVideoReel = ({item, index, currentIndex}) => {
+const SingleVideoReel1 = ({item, index, currentIndex}) => {
   const windowWidth = Dimensions.get('window').width;
   const windowHeight = Dimensions.get('window').height;
 
@@ -88,4 +88,4 @@ const SingleVideoReel = ({item, index, currentIndex}) => {
   );
 };
 
-export default SingleVideoReel;
+export default SingleVideoReel1;

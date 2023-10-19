@@ -1,5 +1,5 @@
 export const videoData = [
-  /*{
+  {
     title: 'Sintel',
     description:
       'A lonely young woman, Sintel, helps and befriends a dragon, whom she calls Scales. But when he is kidnapped by an adult dragon, Sintel decides to embark on a dangerous quest to find her lost friend Scales.',
@@ -29,7 +29,7 @@ export const videoData = [
     thumbnailUrl: 'https://download.blender.org/ED/cover.jpg',
     genre: 'Sci-Fi',
     duration: '15 minutes',
-  }, */
+  },
   {
     title: 'Big Buck Bunny',
     description:
