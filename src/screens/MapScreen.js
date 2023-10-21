@@ -1,17 +1,17 @@
 import React from 'react';
 import { Dimensions, Image, View } from 'react-native';
 import ImageZoom from 'react-native-image-pan-zoom';
-import TopNav from '../components/Header';
+import Header from '../components/Header';
 
 const MapScreen = () => {
   return (
     <View className="bg-[#f64e32] flex-1 justify-end items-center space-y-5 relative">
-      <TopNav/>
+      <Header/>
       <ImageZoom
         cropWidth={Dimensions.get('window').width}
         cropHeight={Dimensions.get('window').height}
-        imageWidth={500}
-        imageHeight={750}
+        imageWidth={700}
+        imageHeight={950}
       >
         <Image 
             source={require('../assets/images/floormap.jpg')}

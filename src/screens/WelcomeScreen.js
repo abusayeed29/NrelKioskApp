@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { Dimensions, Image, StatusBar, Text, TouchableOpacity, View } from 'react-native';
-import VideoReels from '../components/VideoReels';
+import Reels from '../components/Reels';
 
 const WelcomeScreen = () => {
   const navigation = useNavigation();
@@ -26,15 +26,16 @@ const WelcomeScreen = () => {
       </View>
       
       {/* Swiper FlatList component */}
-      <VideoReels/>
+      <Reels/>
 
-      <View className="my-4 mb-10 absolute mx-auto z-10 bottom-5">
+      <View className="w-full bottom-0 absolute mx-auto rounded-t-full z-10  border-neutral-100 border border-b-0 justify-center opacity-40 bg-black">
         <TouchableOpacity
           onPress={() => navigation.navigate('HomeTab')}
-          className="px-12 py-3 rounded-xl bg-red-600">
-          <Text className="text-white text-lg font-medium">Explore</Text>
+          className="justify-center items-center py-5">
+          <Text className="text-white text-xl font-light items-center">Switch to Navigate</Text>
         </TouchableOpacity>
       </View>
+
 
       {/* title and button */}
       {/* <View className="flex items-center justify-center py-28 max-w-[80%]">

@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native';
 import { XMarkIcon } from 'react-native-heroicons/outline';
-import TopNav from '../components/Header';
+import Header from '../components/Header';
 import { companyData } from '../components/data/ProjectData';
 
 const SearchScreen = () => {
@@ -41,10 +41,12 @@ const SearchScreen = () => {
 
   return (
     <View className="bg-neutral-800 flex-1 space-y-5 relative">
-      <TopNav />
+      <Header />
 
       <SafeAreaView className="flex-1">
-        <View className="mx-4 mb-3 mt-10 flex-row border justify-between items-center border-neutral-500 rounded-full">
+        <View 
+        style={{borderColor:'#737373', borderWidth:1}}
+        className="mx-4 mb-3 mt-10 flex-row  border-neutral-500 justify-between items-center rounded-full">
           <TextInput
             placeholder="Search here ..."
             placeholderTextColor={'lightgray'}

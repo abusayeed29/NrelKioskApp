@@ -1,10 +1,12 @@
-import React from 'react'
-import { Image, StatusBar, Text, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
+import React from 'react';
+import { Image, StatusBar, Text, View } from 'react-native';
 
-const TopNav = () => {
+const Header = () => {
+  const navigation = useNavigation();
   return (
     <>
-     <Image
+      <Image
         source={require('../assets/images/bg-main.jpg')}
         style={{
           position: 'absolute',
@@ -17,8 +19,9 @@ const TopNav = () => {
       <View className="absolute top-3 left-3 right-0 z-10">
         <Text className="text-white font-bold text-3xl">NREL</Text>
       </View>
+      
     </>
-  )
-}
+  );
+};
 
-export default TopNav
+export default Header;

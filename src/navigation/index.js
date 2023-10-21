@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import LevelDetails from '../components/LevelDetails';
+import AboutScreen from '../screens/AboutScreen';
 import ContactScreen from '../screens/ContactScreen';
 import DirectoryScreen from '../screens/DirectoryScreen';
 import HomeScreen from '../screens/HomeScreen';
@@ -25,6 +26,7 @@ export default function AppNavigation() {
         <Stack.Screen name="HomeTab" component={HomeTabs} />
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="Contact" component={ContactScreen} />
+        <Stack.Screen name="About" component={AboutScreen} />
         <Stack.Screen name="LevelDetails" component={LevelDetails} />
       </Stack.Navigator>
     );
