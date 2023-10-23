@@ -19,7 +19,7 @@ export const videoData = [
       'https://mango.blender.org/wp-content/uploads/2013/05/01_thom_celia_bridge.jpg',
     genre: 'Action',
     duration: '12 minutes',
-  },
+  }, 
   {
     title: "Elephant's Dream",
     description:
@@ -29,7 +29,7 @@ export const videoData = [
     thumbnailUrl: 'https://download.blender.org/ED/cover.jpg',
     genre: 'Sci-Fi',
     duration: '15 minutes',
-  }, */
+  },*/
   {
     title: 'Big Buck Bunny',
     description:
@@ -40,7 +40,20 @@ export const videoData = [
       'https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png',
     genre: 'Comedy',
     duration: '10 minutes',
+  }, 
+
+  {
+    title: 'NAVANA BRENTWOOD',
+    description:
+      'Three rodents amuse themselves by harassing creatures of the forest. However, when they mess with a bunny, he decides to teach them a lesson.',
+    videoUrl:
+      'https://d2xwbzmsxgzgf0.cloudfront.net/NAVANA-BRENTWOOD.mp4',
+    thumbnailUrl:
+      'https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png',
+    genre: 'Apartment',
+    duration: '10 minutes',
   },
+
 ];
 
 export const LevelData = [

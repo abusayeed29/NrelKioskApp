@@ -6,6 +6,7 @@ const DirectoryScreen = () => {
   return (
     <View className="bg-[#f64e32] flex-1 space-y-5 relative">
       <TopNav />
+
       <ScrollView>
         <View className="mx-4 border-rose-400 border-b">
           <Text className="text-white mt-10 pb-3 text-xl pt-5">Directory</Text>

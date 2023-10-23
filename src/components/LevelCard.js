@@ -26,13 +26,16 @@ const LevelCard = ({data, index}) => {
           navigation.navigate('LevelDetails',{data:item});
         }}
       >
-        <View className="space-y-1 mr-4 mt-5">
+        <View 
+           style={{width: width * 0.42, height: height * 0.18}}
+          className="space-y-1 mr-4 mt-5 bg-neutral-700 flex-1 rounded-xl items-center">
           <Image
             source={require('../assets/images/bg-main.jpg')}
             className="rounded-xl"
-            style={{width: width * 0.4, height: height * 0.12}}
+            resizeMode='contain'
+            style={{width: width * 0.42, height: height * 0.12}}
           />
-          <Text className="text-white">{item.name}</Text>
+          <Text className="text-white mx-1 justify-center items-center">{item.name}</Text>
         </View>
       </TouchableWithoutFeedback>
     );

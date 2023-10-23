@@ -4,6 +4,7 @@ import { Dimensions, ScrollView, Text, TouchableOpacity, View } from 'react-nati
 import { ArrowRightIcon } from 'react-native-heroicons/outline';
 import Header from '../components/Header';
 import Levels from '../components/Levels';
+import RightNav from '../components/RightNav';
 import { LevelData } from '../components/data/ProjectData';
 
 const {width, height} = Dimensions.get('window');
@@ -15,7 +16,7 @@ const HomeScreen = () => {
       {/* Top Nav section */}
       <Header />
 
-      <View className="absolute top-3 right-3 z-10 flex-1 space-y-2">
+      <View className="absolute top-0 right-3 z-10 flex-1 space-y-2">
         <TouchableOpacity
           className="flex-row text-red-500 border border-red-500 rounded-full py-1 px-2 justify-end"
           onPress={() => navigation.navigate('About')}>
@@ -36,6 +37,9 @@ const HomeScreen = () => {
         </TouchableOpacity>
         
       </View>
+
+      {/* Right Nav */}
+      <RightNav/>
 
       {/* Project levels */}
       <ScrollView>

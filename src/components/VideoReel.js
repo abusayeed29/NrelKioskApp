@@ -17,10 +17,9 @@ const VideoReel = ({item, index, currentIndex}) => {
     console.log('error', error);
   };
 
-  //console.log(item.videoUrl);
+  //console.log(item.thumbnailUrl);
 
   const [mute, setMute] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
     <View
@@ -36,14 +35,15 @@ const VideoReel = ({item, index, currentIndex}) => {
         onPress={() => setMute(!mute)}
         style={{width: '100%', height: '100%', position: 'absolute'}}>
         <Video
+         // source={require('../assets/video/welcome.mp4')}
+          poster={item.thumbnailUrl}
+          source={{uri: item.videoUrl}}
+          resizeMode="cover"
           videoRef={videoRef}
           onBuffer={onBuffer}
           onError={onError}
           repeat={false}
-          resizeMode="cover"
           paused={false}
-          // source={{uri: item.videoUrl}}
-          source={require('../assets/video/welcome.mp4')}
           mute={mute}
           style={{width: '100%', height: '100%', position: 'absolute'}}
         />

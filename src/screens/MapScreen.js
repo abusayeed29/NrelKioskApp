@@ -2,11 +2,14 @@ import React from 'react';
 import { Dimensions, Image, View } from 'react-native';
 import ImageZoom from 'react-native-image-pan-zoom';
 import Header from '../components/Header';
+import RightNav from '../components/RightNav';
 
 const MapScreen = () => {
   return (
     <View className="bg-[#f64e32] flex-1 justify-end items-center space-y-5 relative">
       <Header/>
+      {/* Right Nav */}
+      <RightNav/>
       <ImageZoom
         cropWidth={Dimensions.get('window').width}
         cropHeight={Dimensions.get('window').height}

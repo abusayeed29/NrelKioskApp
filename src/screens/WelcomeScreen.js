@@ -6,11 +6,11 @@ import Reels from '../components/Reels';
 const WelcomeScreen = () => {
   const navigation = useNavigation();
 
-  const width = Dimensions.get('window').width;
-  const height = Dimensions.get('window').height;
+  const windowWidth = Dimensions.get('window').width;
+  const windowHeight = Dimensions.get('window').height;
   
   return (
-    <View className="bg-[#f64e32] flex-1 justify-end items-center space-y-5 relative">
+    <View className="bg-[#f64e32] flex-1 justify-end space-y-5 relative">
       <Image
         source={require('../assets/images/bg-splash.jpg')}
         style={{
