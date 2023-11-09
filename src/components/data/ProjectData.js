@@ -29,7 +29,7 @@ export const videoData = [
     thumbnailUrl: 'https://download.blender.org/ED/cover.jpg',
     genre: 'Sci-Fi',
     duration: '15 minutes',
-  },*/
+  },
   {
     title: 'Big Buck Bunny',
     description:
@@ -40,17 +40,17 @@ export const videoData = [
       'https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png',
     genre: 'Comedy',
     duration: '10 minutes',
-  }, 
+  }, */
 
   {
-    title: 'NAVANA BRENTWOOD',
+    title: 'NAVANA HR TOWER',
     description:
-      'Three rodents amuse themselves by harassing creatures of the forest. However, when they mess with a bunny, he decides to teach them a lesson.',
+      'Grand double height Entry.Elegant Reception and furnished waiting room.Professionally Designed Landscaping & Lighting.High speed Lifts with ARD (Automatic Rescue Device).Fire Safety System with industry grade fire pump and fire stair.100% Power Backup by premium synchronised Generator.Multi-level car parking.Building maintenance by highly trained technicians of FMD (Facility Management Department). Helipad.Tall panoramic windows for better view & brighter interiors.CCTV Monitoring System.Low emission heat resistant Façade glass system.Jet fan ventilation system for basement.Central HVAC system with VRF air conditioning.Building Automation System (Optional).Customised Interior fit out packages.',
     videoUrl:
-      'https://d2xwbzmsxgzgf0.cloudfront.net/NAVANA-BRENTWOOD.mp4',
+      'https://d2xwbzmsxgzgf0.cloudfront.net/hr-tower.mp4',
     thumbnailUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png',
-    genre: 'Apartment',
+      'https://navana-realestate.com/uploads/projects/hr-tower-11jpg-6174e7a89943d-2021-10-24-0.jpg',
+    genre: 'Commercial',
     duration: '10 minutes',
   },
 

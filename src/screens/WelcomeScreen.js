@@ -1,6 +1,13 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { Dimensions, Image, StatusBar, Text, TouchableOpacity, View } from 'react-native';
+import {
+  Dimensions,
+  Image,
+  StatusBar,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import Reels from '../components/Reels';
 
 const WelcomeScreen = () => {
@@ -8,7 +15,7 @@ const WelcomeScreen = () => {
 
   const windowWidth = Dimensions.get('window').width;
   const windowHeight = Dimensions.get('window').height;
-  
+
   return (
     <View className="bg-[#f64e32] flex-1 justify-end space-y-5 relative">
       <Image
@@ -22,20 +29,41 @@ const WelcomeScreen = () => {
       />
       <StatusBar style="light" />
       <View className="absolute top-0 left-3 right-0 z-10">
-        <Text className="text-white font-bold text-3xl">NREL</Text>
+        <Image
+          source={require('../assets/images/logo.png')}
+          style={{
+            height:27,
+            width:85
+          }}
+        />
+        {/* <Text className="text-white font-bold text-3xl">NREL</Text> */}
       </View>
-      
-      {/* Swiper FlatList component */}
-      <Reels/>
 
-      <View className="w-full bottom-0 absolute mx-auto rounded-t-full z-10  border-neutral-100 border border-b-0 justify-center opacity-40 bg-black">
+      {/* Swiper FlatList component */}
+      <Reels />
+
+      <View className="w-full bottom-0 absolute mx-auto rounded-t-full z-10 justify-cente h-25">
+        
         <TouchableOpacity
           onPress={() => navigation.navigate('HomeTab')}
-          className="justify-center items-center py-5">
-          <Text className="text-white text-xl font-light items-center">Switch to Navigate</Text>
+          className="justify-center items-center">
+          <Text className="text-white text-xl font-light items-center py-24">
+            Switch to Navigate
+          </Text>
+          <Image
+            source={require('../assets/images/ellipse.png')}
+            style={{
+              position: 'absolute',
+              width: '100%',
+              height: '100%',
+            }}
+          />
+          
         </TouchableOpacity>
-      </View>
 
+        
+          
+      </View>
 
       {/* title and button */}
       {/* <View className="flex items-center justify-center py-28 max-w-[80%]">

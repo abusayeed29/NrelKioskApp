@@ -18,6 +18,7 @@ npm install react-native-svg
 
 
 ./gradlew assembleRelease
+./gradlew clean
 
 
 
@@ -43,4 +44,7 @@ git push -u origin main
 
 
 
-https://www.youtube.com/watch?v=iCZ7KULNQys
+https://www.youtube.com/watch?v=iCZ7KULNQys6
+
+https://www.youtube.com/watch?v=-2KuOCYJoRk
+

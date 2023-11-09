@@ -1,12 +1,12 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {
-    Dimensions,
-    Image,
-    SafeAreaView,
-    ScrollView,
-    Text,
-    View,
+  Dimensions,
+  Image,
+  SafeAreaView,
+  ScrollView,
+  Text,
+  View,
 } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { ChevronLeftIcon } from 'react-native-heroicons/outline';
@@ -35,7 +35,7 @@ const LevelDetails = ({route}) => {
           }>
           <TouchableOpacity
             onPress={() => navigation.goBack()}
-            className="rounded-3xl p-1 mb-3 bg-red-500">
+            className="rounded-3xl p-1 mb-3 bg-red-500 border border-red-500">
             <ChevronLeftIcon size="28" strokeWidth={2.5} color="white" />
           </TouchableOpacity>
         </SafeAreaView>

@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { Image, StatusBar, Text, View } from 'react-native';
+import { Image, StatusBar, View } from 'react-native';
 
 const Header = () => {
   const navigation = useNavigation();
@@ -16,8 +16,15 @@ const Header = () => {
         resizeMode="cover"
       />
       <StatusBar style="light" />
-      <View className="absolute top-3 left-3 right-0 z-10">
-        <Text className="text-white font-bold text-3xl">NREL</Text>
+      <View className="absolute top-4 left-3 right-0 z-10">
+        <Image
+          source={require('../assets/images/logo.png')}
+          style={{
+            height:27,
+            width:85
+          }}
+        />
+        {/* <Text className="text-white font-bold text-3xl">NREL</Text> */}
       </View>
       
     </>
