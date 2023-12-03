@@ -1,12 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import {
-  Dimensions,
-  ScrollView,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { Dimensions, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { ArrowRightIcon } from 'react-native-heroicons/outline';
 import Header from '../components/Header';
 import Levels from '../components/Levels';
@@ -15,10 +9,10 @@ import { LevelData } from '../components/data/ProjectData';
 
 const {width, height} = Dimensions.get('window');
 
-const HomeScreenB2 = () => {
+const HomeScreen = () => {
   const navigation = useNavigation();
   return (
-    <View className="bg-[#f64e32] flex space-y-5">
+    <View className="bg-[#f64e32] flex-1 space-y-5 relative">
       {/* Top Nav section */}
       <Header />
 
@@ -41,29 +35,15 @@ const HomeScreenB2 = () => {
             <ArrowRightIcon size="12" strokeWidth={2.5} color="#fff" />
           </View>
         </TouchableOpacity>
+        
       </View>
 
       {/* Right Nav */}
-      <RightNav />
+      <RightNav/>
 
       {/* Project levels */}
       <ScrollView>
-        {/* <View className="flex flex-row flex-wrap content-center items-center gap-2 overflow-hidden">
-          <Text className="flex flex-1 basis-[32]">01</Text>
-          <Text className="flex flex-1  basis-[32]">01</Text>
-          <Text className="flex flex-1  basis-[32]">01</Text>
-          <Text className="flex flex-1  basis-[32]">01</Text>
-
-          <Text className="flex flex-1  basis-[32]">01</Text>
-          <Text className="flex flex-1  basis-[32]">01</Text>
-          <Text className="flex flex-1  basis-[32]">01</Text>
-          <Text className="flex flex-1  basis-[32]">01</Text>
-          <Text className="flex flex-1  basis-[32]">01</Text>
-          <Text className="flex flex-1  basis-[32]">01</Text>
-          <Text className="flex flex-1  basis-[32]">01 sdsdsd</Text>
-          <Text className="flex flex-1  basis-[32]">Welcome hsajsh dsd</Text>
-        </View> */}
-        <View className="mt-20 mb-5 flex flex-row flex-wrap mr-16">
+        <View className="mt-10 mb-5">
           {LevelData.map((item, index) => (
             <Levels item={item} key={index} />
           ))}
@@ -73,4 +53,4 @@ const HomeScreenB2 = () => {
   );
 };
 
-export default HomeScreenB2;
+export default HomeScreen;

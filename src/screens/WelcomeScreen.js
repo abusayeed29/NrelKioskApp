@@ -60,9 +60,7 @@ const WelcomeScreen = () => {
           />
           
         </TouchableOpacity>
-
         
-          
       </View>
 
       {/* title and button */}

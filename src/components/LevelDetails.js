@@ -35,14 +35,14 @@ const LevelDetails = ({route}) => {
           }>
           <TouchableOpacity
             onPress={() => navigation.goBack()}
-            className="rounded-3xl p-1 mb-3 bg-red-500 border border-red-500">
+            className="rounded-3xl p-1 mb-3 bg-red-500 border-4 border-red-700 shadow shadow-white-500/50">
             <ChevronLeftIcon size="28" strokeWidth={2.5} color="white" />
           </TouchableOpacity>
         </SafeAreaView>
 
         <View>
           <Image
-            source={require('../assets/images/bg-main.jpg')}
+            source={require('../assets/images/hr-tower-b2.png')}
             style={{width: width, height: height * 0.55}}
           />
           <LinearGradient
@@ -59,7 +59,7 @@ const LevelDetails = ({route}) => {
         </View>
       </View>
       {/* Company details */}
-      <View style={{marginTop: -(height * 0.09)}} className="space-y-3">
+      <View style={{marginTop: -(height * 0.15)}} className="space-y-3">
         <Text className="text-white text-center text-3xl font-bold tracking-wider">
           {content?.name}
         </Text>
@@ -69,12 +69,12 @@ const LevelDetails = ({route}) => {
             Location: {content.map}
           </Text>
         </View>
-        <Text className="text-neutral-400 mx-4 tracking-wide">
+        <Text className="text-neutral-400 mx-4 tracking-wide text-justify">
           {content?.desciption}
         </Text>
 
-        <View className="my-3 mx-4 flex-row justify-evenly">
-          <View>
+        <View className="my-3 mx-4 flex flex-row justify-between">
+          <View className="w-1/2 mr-2">
             <Text className="text-white text-lg mb-3 mt-3">Visit</Text>
             <View className="flex-col justify-between">
               {visitData?.map((item, index) => {
@@ -89,13 +89,13 @@ const LevelDetails = ({route}) => {
             </View>
           </View>
           {/* right side */}
-          <View>
+          <View className="w-1/2">
             <Text className="text-white text-lg mb-3 mt-3">Contact Info</Text>
-            <Text className="text-neutral-300 font-semibold text-base text-left">
+            <Text className="text-neutral-300 font-semibold text-base text-left break-words">
                 Email: {content.email}
             </Text>
             <Text className="text-neutral-300 font-semibold text-base text-left">
-                Phone: {content.phone}{' '}
+                Phone: {content.phone}
             </Text>
 
           </View>

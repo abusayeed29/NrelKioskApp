@@ -10,10 +10,12 @@ const Levels = ({item, index}) => {
   //console.log(item.companies);
   const companydata = item.companies;
   return (
-      <View className="items-center m-1 mx-auto rounded-xl w-1/2">
-        <Text className="text-white text-lg mb-1" style={{fontFamily:'Alata-Regular'}}>{item.title} </Text>
-        <LevelCard data={companydata} index={index}/>
+    <View className="mb-1 mt-5 ml-5">
+      <View className="flex-row justify-between items-center">
+        <Text className="text-white text-lg font-bold">{item.title} </Text>
       </View>
+      <LevelCard data={companydata} index={index}/>
+    </View>
   );
 };
 

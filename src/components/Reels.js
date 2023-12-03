@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import { useEffect, useRef, useState } from 'react';
-import { Dimensions, View } from 'react-native';
+import { Dimensions, TouchableOpacity, View } from 'react-native';
 import SwiperFlatList from 'react-native-swiper-flatlist';
 import Video from 'react-native-video';
 import { videoData } from './data/ProjectData';
@@ -14,6 +14,7 @@ const Reels = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const videoRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(true);
 
   const onBuffer = buffer => {
     console.log('buffering', buffer);
@@ -28,54 +29,28 @@ const Reels = () => {
     //console.log("props ===>>>", index);
   };
 
-  // This effect will be triggered when navigating away from the screen
-  useEffect(() => {
-    const unsubscribe = navigation.addListener('beforeRemove', (e) => {
-      if (videoRef.current) {
-        console.log(videoRef.current);
-        videoRef.current.pauseAsync(); // Pause the video before navigating away
-      }
-    });
-
-    return unsubscribe;
-  }, [navigation]);
-
   useEffect(() => {
     //console.log("videoRef", videoRef);
-    if (!!videoRef.current) {
+    if (!videoRef.current) {
       videoRef.current.seek(0);
     }
   }, [currentIndex]);
 
-
-  /* useEffect(() => {
-    const unsubscribe = navigation.addListener('blur', () => {
-      console.log('Blur');
-      //Every time the screen loses focus the Video is paused
-      if (this.video) {
-        this.video.pauseAsync();
-      }
-    });
-
-    return unsubscribe;
-  }, [navigation]);
-
-  useEffect(() => {
-    const unsubscribe = navigation.addListener('focus', () => {
-      console.log('Focus');
-      //Every time the screen is focused the Video starts playing
-      if (this.video) {
-        this.video.playAsync();
-      }
-    }); 
-
-    return unsubscribe;
-  }, [navigation]); */
+  const togglePlayPause = () => {
+    setIsPaused(!isPaused);
+    // if (videoRef.current) {
+    //   videoRef.current.seek(0);
+    //   setIsPaused(!isPaused);
+      
+    // }
+  };
 
   renderItem = ({item, index}) => {
-    console.log('itemsss', item);
+    console.log('indexx', index);
     return (
-      <View
+      <View>
+      <TouchableOpacity
+        onPress={togglePlayPause}
         style={{
           width: windowWidth,
           height: windowHeight,
@@ -83,19 +58,29 @@ const Reels = () => {
           justifyContent: 'center',
           alignItems: 'center',
         }}>
+          
         <Video
           // source={require('../assets/video/welcome.mp4')}
           source={{uri: item.videoUrl}}
-          resizeMode="contain"
+          resizeMode="conyain"
           poster={item.thumbnailUrl}
           posterResizeMode="cover"
           ref={videoRef}
           onBuffer={onBuffer}
           onError={onError}
-          repeat={false}
-          paused={currentIndex !== index}
+          repeat={true}
+          //paused={currentIndex !== index}
+          paused={!isPaused }
           style={{width: '100%', height: '100%', position: 'absolute'}}
         />
+      </TouchableOpacity>
+
+      {/* <TouchableOpacity onPress={togglePlayPause}>
+          <View style={{padding: 10}}>
+            {isPaused ? <Text>Pause</Text> : <Text>Play</Text>}
+          </View>
+      </TouchableOpacity> */}
+
       </View>
     );
   };

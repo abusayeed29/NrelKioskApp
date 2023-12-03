@@ -22,9 +22,9 @@ export default function AppNavigation() {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName="Welcome">
+        initialRouteName="Video">
         <Stack.Screen name="HomeTab" component={HomeTabs} />
-        <Stack.Screen name="Welcome" component={WelcomeScreen} />
+        <Stack.Screen name="Video" component={WelcomeScreen} />
         <Stack.Screen name="Contact" component={ContactScreen} />
         <Stack.Screen name="About" component={AboutScreen} />
         <Stack.Screen name="LevelDetails" component={LevelDetails} />
@@ -40,9 +40,9 @@ export default function AppNavigation() {
 
           tabBarIcon: ({focused}) => {
             let iconName;
-            if (route.name === 'Home') {
-              iconName = 'home';
-            } else if (route.name === 'Map') {
+            if (route.name === 'Level') {
+              iconName = 'list';
+            }else if (route.name === 'Map') {
               iconName = 'location';
             } else if (route.name === 'Search') {
               iconName = 'search';
@@ -67,7 +67,7 @@ export default function AppNavigation() {
             paddingBottom: 10,
           },
         })}>
-        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Level" component={HomeScreen} />
         <Tab.Screen name="Map" component={MapScreen} />
         <Tab.Screen name="Directory" component={DirectoryScreen} />
         <Tab.Screen name="Search" component={SearchScreen} />

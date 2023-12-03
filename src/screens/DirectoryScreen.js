@@ -1,11 +1,14 @@
 import React from 'react';
 import { ScrollView, Text, View } from 'react-native';
 import TopNav from '../components/Header';
+import RightNav from '../components/RightNav';
 
 const DirectoryScreen = () => {
   return (
     <View className="bg-[#f64e32] flex-1 space-y-5 relative">
       <TopNav />
+      {/* Right Nav */}
+      <RightNav/>
 
       <ScrollView>
         <View className="mx-4 border-rose-400 border-b">
