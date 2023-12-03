@@ -1,13 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import {
-  Dimensions,
-  Image,
-  SafeAreaView,
-  ScrollView,
-  Text,
-  View,
-} from 'react-native';
+import { Dimensions, Image, ScrollView, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { ChevronLeftIcon } from 'react-native-heroicons/outline';
 import LinearGradient from 'react-native-linear-gradient';
@@ -20,8 +13,7 @@ var {width, height} = Dimensions.get('window');
 const LevelDetails = ({route}) => {
   const content = route.params.data;
   const navigation = useNavigation();
-  console.log(content);
-
+  //console.log(content);
   const visitData = content.visit;
   return (
     <ScrollView
@@ -29,16 +21,19 @@ const LevelDetails = ({route}) => {
       className="flex-1 bg-neutral-900">
       {/* back button and movie poster */}
       <View className="w-full">
-        <SafeAreaView
+        <View
           className={
             'absolute z-20 w-full flex-row justify-between items-center px-4 mt-3'
           }>
+          <LinearGradient colors={['#ff9999', '#ff0000', '#ff9999']} className="rounded-3xl p-1 my-3 border-none shadow-lg shadow-white-500/50">
           <TouchableOpacity
             onPress={() => navigation.goBack()}
-            className="rounded-3xl p-1 mb-3 bg-red-500 border-4 border-red-700 shadow shadow-white-500/50">
+            style={{}}
+            className="">
             <ChevronLeftIcon size="28" strokeWidth={2.5} color="white" />
           </TouchableOpacity>
-        </SafeAreaView>
+          </LinearGradient>
+        </View>
 
         <View>
           <Image
@@ -92,15 +87,13 @@ const LevelDetails = ({route}) => {
           <View className="w-1/2">
             <Text className="text-white text-lg mb-3 mt-3">Contact Info</Text>
             <Text className="text-neutral-300 font-semibold text-base text-left break-words">
-                Email: {content.email}
+              Email: {content.email}
             </Text>
             <Text className="text-neutral-300 font-semibold text-base text-left">
-                Phone: {content.phone}
+              Phone: {content.phone}
             </Text>
-
           </View>
         </View>
-
       </View>
     </ScrollView>
   );

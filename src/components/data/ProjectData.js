@@ -27,7 +27,7 @@ export const videoData = [
     description:
       'Grand double height Entry.Elegant Reception and furnished waiting room.Professionally Designed Landscaping & Lighting.High speed Lifts with ARD (Automatic Rescue Device).Fire Safety System with industry grade fire pump and fire stair.100% Power Backup by premium synchronised Generator.Multi-level car parking.Building maintenance by highly trained technicians of FMD (Facility Management Department). Helipad.Tall panoramic windows for better view & brighter interiors.CCTV Monitoring System.Low emission heat resistant Façade glass system.Jet fan ventilation system for basement.Central HVAC system with VRF air conditioning.Building Automation System (Optional).Customised Interior fit out packages.',
     videoUrl:
-      'https://d2xwbzmsxgzgf0.cloudfront.net/hr-tower.mp4',
+      'https://d2xwbzmsxgzgf0.cloudfront.net/hr-tower-1.mp4',
     thumbnailUrl:
       'https://navana-realestate.com/uploads/projects/hr-tower-11jpg-6174e7a89943d-2021-10-24-0.jpg',
     genre: 'Commercial',

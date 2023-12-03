@@ -47,7 +47,7 @@ const WelcomeScreen = () => {
         <TouchableOpacity
           onPress={() => navigation.navigate('HomeTab')}
           className="justify-center items-center">
-          <Text className="text-white text-xl font-light items-center py-24">
+          <Text style={{fontFamily:'Alata-Regular'}} className="text-white text-xl font-light items-center py-24">
             Switch to Navigate
           </Text>
           <Image
@@ -58,7 +58,6 @@ const WelcomeScreen = () => {
               height: '100%',
             }}
           />
-          
         </TouchableOpacity>
         
       </View>

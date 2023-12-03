@@ -26,7 +26,7 @@ const HomeScreenB2 = () => {
         <TouchableOpacity
           className="flex-row text-red-500 border border-red-500 rounded-full py-1 px-2 justify-end"
           onPress={() => navigation.navigate('About')}>
-          <Text className="text-white text-sm mr-3">About</Text>
+          <Text style={{fontFamily:'Alata-Regular'}}  className="text-white text-sm mr-3">About</Text>
 
           <View className="bg-red-500 w-5 h-5 rounded-full justify-center mt-[1] p-1">
             <ArrowRightIcon size="12" strokeWidth={2.5} color="#fff" />
@@ -36,7 +36,7 @@ const HomeScreenB2 = () => {
         <TouchableOpacity
           className=" justify-end flex-row text-red-500 border border-red-500 rounded-full py-1 px-3"
           onPress={() => navigation.navigate('Contact')}>
-          <Text className="text-white text-sm mr-4">Contact</Text>
+          <Text style={{fontFamily:'Alata-Regular'}}  className="text-white text-sm mr-4">Contact</Text>
           <View className="bg-red-500 w-5 h-5 rounded-full justify-center mt-[1] p-1">
             <ArrowRightIcon size="12" strokeWidth={2.5} color="#fff" />
           </View>

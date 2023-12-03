@@ -8,16 +8,18 @@ const RightNav = () => {
   const route = useRoute();
   console.log(route.name);
   return (
-    <View className="flex-1 inline-flex rounded-md shadow-sm absolute right-0 z-10 top-40 bg-white text-center justify-center opacity-90">
-      <TouchableOpacity onPress={() => navigation.navigate('Level')}
-        className={"border-b border-gray-300 rounded-t-md"+ (route.name == 'Level' ? ' bg-black': 'bg-white') }>
+    <View className="flex-1 inline-flex rounded-bl-md rounded-tl-md shadow-sm absolute right-0 z-10 top-40 bg-white text-center justify-center opacity-80">
+      
+      <TouchableOpacity onPress={() => navigation.navigate('Levels')}
+        className={"border-b border-gray-300 rounded-tl-md"+ (route.name == 'Levels' ? ' bg-black': 'bg-white') }>
         <View className="px-1 py-2">
             <View className="bg-red-600 w-100 justify-center items-center text-cente mx-auto rounded-full p-1">
                 <Icon name="chevron-up-sharp" size={18} color="#fff"/>
             </View>
-          <Text style={{fontFamily:'Alata-Regular'}} className={"text-center " + (route.name == 'Level' ? 'text-white': 'text-black') }>Levels</Text>
+          <Text style={{fontFamily:'Alata-Regular'}} className={"text-center " + (route.name == 'Levels' ? 'text-white': 'text-black') }>Levels</Text>
         </View>
       </TouchableOpacity>
+
       <TouchableOpacity 
         onPress={() => navigation.navigate('Map')}
         className={"border-b border-gray-300 "+ (route.name == 'Map' ? ' bg-black': 'bg-white') }>
@@ -28,6 +30,7 @@ const RightNav = () => {
           <Text style={{fontFamily:'Alata-Regular'}} className={"text-center " + (route.name == 'Map' ? 'text-white': 'text-black') }>Maps</Text>
         </View>
       </TouchableOpacity>
+
       <TouchableOpacity onPress={() => navigation.navigate('Directory')}
         className={"border-b border-gray-300 "+ (route.name == 'Directory' ? ' bg-black': 'bg-white') }>
         <View className="px-1 py-2">
@@ -38,27 +41,25 @@ const RightNav = () => {
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity 
-        onPress={() => navigation.navigate('Search')}
-        >
+      <TouchableOpacity onPress={() => navigation.navigate('Search')}
+        className={"border-b border-gray-300 "+ (route.name == 'Search' ? ' bg-black': 'bg-white') }>
         <View className="px-1 py-2">
             <View className="bg-red-600 w-100 justify-center items-center text-cente mx-auto rounded-full p-1">
                 <Icon name="search" size={18} color="#fff"/>
             </View>
-          <Text style={{fontFamily:'Alata-Regular'}} className="text-black text-center">Search</Text>
+            <Text style={{fontFamily:'Alata-Regular'}} className={"text-center " + (route.name == 'Search' ? 'text-white': 'text-black') }>Search</Text>
         </View>
       </TouchableOpacity>
-      <TouchableOpacity 
-        onPress={() => navigation.navigate('Video')}
-        className={"border-b border-gray-300 "+ (route.name == 'Video' ? ' bg-black': 'bg-white') }>
+
+      <TouchableOpacity onPress={() => navigation.navigate('Video')}
+        className="border-b border-gray-300 rounded-bl-md bg-white">
         <View className="px-1 py-2">
             <View className="bg-red-600 w-100 justify-center items-center text-cente mx-auto rounded-full p-1">
                 <Icon name="videocam" size={18} color="#fff"/>
             </View>
-          <Text style={{fontFamily:'Alata-Regular'}} className={"text-center " + (route.name == 'Video' ? 'text-white': 'text-black') }>Video</Text>
+            <Text style={{fontFamily:'Alata-Regular'}} className={"text-center " + (route.name == 'Video' ? 'text-white': 'text-black') }>Ads</Text>
         </View>
       </TouchableOpacity>
-
 
     </View>
   );

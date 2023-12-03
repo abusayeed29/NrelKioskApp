@@ -8,7 +8,12 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { ChevronLeftIcon, EnvelopeIcon, MapPinIcon, PhoneIcon } from 'react-native-heroicons/outline';
+import {
+  ChevronLeftIcon,
+  EnvelopeIcon,
+  MapPinIcon,
+  PhoneIcon,
+} from 'react-native-heroicons/outline';
 
 export default function ContactScreen() {
   const navigation = useNavigation();
@@ -35,7 +40,6 @@ export default function ContactScreen() {
 
       <ScrollView>
         <View className="mx-4 mb-5 space-y-2">
-
           <View className="border-rose-400 border-b">
             <Text className="text-white mt-10 pb-3 text-lg pt-5 font-medium">
               CONTACT
@@ -44,62 +48,97 @@ export default function ContactScreen() {
           </View>
 
           <View className="flex-row my-auto">
-            <MapPinIcon style={{
-              marginTop:15
-            }} size={16} strokeWidth={2.5} color="white"/>
+            <MapPinIcon
+              style={{
+                marginTop: 15,
+              }}
+              size={16}
+              strokeWidth={2.5}
+              color="white"
+            />
             <Text className="text-white mt-3 font-light leading-5 text-justify ml-2">
-              205-207 Tejgaon I/A, Bit Uttam Mir Shawkat Sarak, Dhaka -1208
+              H #3/A, R #90, Gulshan-02, Dhaka-1212, Bangladesh
             </Text>
           </View>
           <View className="flex-row my-auto">
-            <EnvelopeIcon style={{
-              marginTop:15
-            }} size={16} strokeWidth={2.5} color="white"/>
+            <EnvelopeIcon
+              style={{
+                marginTop: 15,
+              }}
+              size={16}
+              strokeWidth={2.5}
+              color="white"
+            />
             <Text className="text-white mt-3 font-light leading-5 text-justify ml-2">
               info@navana-realestate.com
             </Text>
           </View>
 
           <View className="flex-row my-auto">
-            <PhoneIcon style={{
-              marginTop:15
-            }} size={16} strokeWidth={2.5} color="white"/>
+            <PhoneIcon
+              style={{
+                marginTop: 15,
+              }}
+              size={16}
+              strokeWidth={2.5}
+              color="white"
+            />
             <Text className="text-white mt-3 font-light leading-5 text-justify ml-2">
-              01730729305
+              Dial# 58815305 (Hunting), +880 1730 150390 {'\n'}Fax # 02-58815195{' '}
+              {'\n'}Hotline # 16254
             </Text>
           </View>
-
         </View>
 
         <View className="mx-4 mb-5 space-y-2">
           <View className="border-rose-400 border-b">
             <Text className="text-white pb-3 text-lg pt-5 font-medium">
-              CONTACT 
+              CONTACT
               <Text className="text-red-500"> BUILDING MANAGER</Text>
             </Text>
           </View>
 
           <View className="flex-row my-auto">
-            <EnvelopeIcon style={{
-              marginTop:15
-            }} size={16} strokeWidth={2.5} color="white"/>
+            <MapPinIcon
+              style={{
+                marginTop: 15,
+              }}
+              size={16}
+              strokeWidth={2.5}
+              color="white"
+            />
+            <Text className="text-white mt-3 font-light leading-5 text-justify ml-2">
+              205-207 Tejgaon I/A, Bit Uttam Mir Shawkat Sarak, Dhaka -1208
+            </Text>
+          </View>
+          <View className="flex-row my-auto">
+            <EnvelopeIcon
+              style={{
+                marginTop: 15,
+              }}
+              size={16}
+              strokeWidth={2.5}
+              color="white"
+            />
             <Text className="text-white mt-3 font-light leading-5 text-justify ml-2">
               info@navana-realestate.com
             </Text>
           </View>
 
           <View className="flex-row my-auto">
-            <PhoneIcon style={{
-              marginTop:15
-            }} size={16} strokeWidth={2.5} color="white"/>
+            <PhoneIcon
+              style={{
+                marginTop: 15,
+              }}
+              size={16}
+              strokeWidth={2.5}
+              color="white"
+            />
             <Text className="text-white mt-3 font-light leading-5 text-justify ml-2">
-              01730729305
+              01730150390
             </Text>
           </View>
-          
         </View>
-        
-        
       </ScrollView>
     </View>
   );

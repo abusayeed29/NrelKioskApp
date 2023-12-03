@@ -7,7 +7,7 @@ import LevelDetails from '../components/LevelDetails';
 import AboutScreen from '../screens/AboutScreen';
 import ContactScreen from '../screens/ContactScreen';
 import DirectoryScreen from '../screens/DirectoryScreen';
-import HomeScreen from '../screens/HomeScreen';
+import HomeScreen from '../screens/LevelScreen';
 import MapScreen from '../screens/MapScreen';
 import SearchScreen from '../screens/SearchScreen';
 import WelcomeScreen from '../screens/WelcomeScreen';
@@ -40,7 +40,7 @@ export default function AppNavigation() {
 
           tabBarIcon: ({focused}) => {
             let iconName;
-            if (route.name === 'Level') {
+            if (route.name === 'Levels') {
               iconName = 'list';
             }else if (route.name === 'Map') {
               iconName = 'location';
@@ -67,7 +67,7 @@ export default function AppNavigation() {
             paddingBottom: 10,
           },
         })}>
-        <Tab.Screen name="Level" component={HomeScreen} />
+        <Tab.Screen name="Levels" component={HomeScreen} />
         <Tab.Screen name="Map" component={MapScreen} />
         <Tab.Screen name="Directory" component={DirectoryScreen} />
         <Tab.Screen name="Search" component={SearchScreen} />

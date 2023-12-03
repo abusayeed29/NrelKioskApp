@@ -55,7 +55,7 @@ const SearchScreen = () => {
           />
           <TouchableOpacity
             onPress={() => {
-              navigation.navigate('Level');
+              navigation.navigate('Levels');
             }}
             className="rounded-full p-3 m-1 bg-neutral-500">
             <XMarkIcon size="25" color="white" />
