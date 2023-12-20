@@ -14,6 +14,7 @@ import {
   MapPinIcon,
   PhoneIcon,
 } from 'react-native-heroicons/outline';
+import LinearGradient from 'react-native-linear-gradient';
 
 export default function ContactScreen() {
   const navigation = useNavigation();
@@ -31,11 +32,14 @@ export default function ContactScreen() {
       <StatusBar style="light" />
 
       <View className="absolute z-20 w-full flex-row justify-between items-center px-4 mt-3">
-        <TouchableOpacity
-          onPress={() => navigation.goBack()}
-          className="rounded-3xl p-1 mb-3 bg-red-500 ">
-          <ChevronLeftIcon size="28" strokeWidth={2.5} color="white" />
-        </TouchableOpacity>
+        <LinearGradient
+          colors={['#dc2626', '#dc2626', '#dc2626']}
+          className="rounded-3xl p-1 my-3 border-none shadow-lg shadow-white-500/50">
+          <TouchableOpacity
+            onPress={() => navigation.goBack()}>
+            <ChevronLeftIcon size="28" strokeWidth={2.5} color="white" />
+          </TouchableOpacity>
+        </LinearGradient>
       </View>
 
       <ScrollView>

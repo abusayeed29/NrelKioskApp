@@ -3,11 +3,8 @@ import React from 'react';
 import {
   Dimensions,
   ScrollView,
-  Text,
-  TouchableOpacity,
-  View,
+  View
 } from 'react-native';
-import { ArrowRightIcon } from 'react-native-heroicons/outline';
 import Header from '../components/Header';
 import Levels from '../components/Levels';
 import RightNav from '../components/RightNav';
@@ -22,7 +19,7 @@ const HomeScreenB2 = () => {
       {/* Top Nav section */}
       <Header />
 
-      <View className="absolute top-0 right-3 z-10 flex-1 space-y-2">
+      {/* <View className="absolute top-0 right-3 z-10 flex-1 space-y-2">
         <TouchableOpacity
           className="flex-row text-red-500 border border-red-500 rounded-full py-1 px-2 justify-end"
           onPress={() => navigation.navigate('About')}>
@@ -41,7 +38,7 @@ const HomeScreenB2 = () => {
             <ArrowRightIcon size="12" strokeWidth={2.5} color="#fff" />
           </View>
         </TouchableOpacity>
-      </View>
+      </View> */}
 
       {/* Right Nav */}
       <RightNav />

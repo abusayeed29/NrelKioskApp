@@ -21,8 +21,13 @@ const SearchScreen = () => {
     if (userInput === '') {
       return (
         <View className="flex-row justify-between flex-wrap bg-neutral-700 mb-1 opacity-80 rounded-md">
-          <View className="space-y-2">
-            <Text className="text-gray-300 ml-1 py-2"> {item.name}</Text>
+          <View className="mb-3 p-2">
+            <Text className="text-gray-300 ml-1">
+              Company Name: {item.name}
+            </Text>
+            <Text className="text-neutral-300 ml-1">
+              Location: {item.floor} | {item.map}
+            </Text>
           </View>
         </View>
       );
@@ -30,9 +35,12 @@ const SearchScreen = () => {
 
     if (item.name.toLowerCase().includes(userInput.toLowerCase())) {
       return (
-        <View className="flex-row justify-between flex-wrap">
-          <View className="space-y-2 mb-4">
-            <Text className="text-gray-300 ml-1"> {item.name}</Text>
+        <View className="flex-row justify-between flex-wrap bg-neutral-700 mb-1 opacity-80 rounded-md">
+          <View className="mb-3 p-2">
+            <Text className="text-gray-300 ml-1">
+              Company Name: {item.name}
+            </Text>
+            <Text className="text-neutral-300 ml-1">Location: {item.map}</Text>
           </View>
         </View>
       );
@@ -44,9 +52,9 @@ const SearchScreen = () => {
       <Header />
 
       <SafeAreaView className="flex-1">
-        <View 
-        style={{borderColor:'#737373', borderWidth:1}}
-        className="mx-4 mb-3 mt-10 flex-row  border-neutral-500 justify-between items-center rounded-full">
+        <View
+          style={{borderColor: '#737373', borderWidth: 1}}
+          className="mx-4 mb-3 mt-10 flex-row  border-neutral-500 justify-between items-center rounded-full">
           <TextInput
             placeholder="Search here ..."
             placeholderTextColor={'lightgray'}

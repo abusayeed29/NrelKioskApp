@@ -6,7 +6,6 @@ import Ionicon from 'react-native-vector-icons/Ionicons';
 import LevelDetails from '../components/LevelDetails';
 import AboutScreen from '../screens/AboutScreen';
 import ContactScreen from '../screens/ContactScreen';
-import DirectoryScreen from '../screens/DirectoryScreen';
 import HomeScreen from '../screens/LevelScreen';
 import MapScreen from '../screens/MapScreen';
 import SearchScreen from '../screens/SearchScreen';
@@ -46,8 +45,8 @@ export default function AppNavigation() {
               iconName = 'location';
             } else if (route.name === 'Search') {
               iconName = 'search';
-            } else if (route.name === 'Directory') {
-              iconName = 'checkmark';
+            } else if (route.name === 'Contact') {
+              iconName = 'call';
             }
             const customizeSize = 25;
 
@@ -69,7 +68,7 @@ export default function AppNavigation() {
         })}>
         <Tab.Screen name="Levels" component={HomeScreen} />
         <Tab.Screen name="Map" component={MapScreen} />
-        <Tab.Screen name="Directory" component={DirectoryScreen} />
+        <Tab.Screen name="Contact" component={ContactScreen} />
         <Tab.Screen name="Search" component={SearchScreen} />
       </Tab.Navigator>
     );

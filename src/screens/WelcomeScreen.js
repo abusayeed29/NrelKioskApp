@@ -48,7 +48,7 @@ const WelcomeScreen = () => {
           onPress={() => navigation.navigate('HomeTab')}
           className="justify-center items-center">
           <Text style={{fontFamily:'Alata-Regular'}} className="text-white text-xl font-light items-center py-24">
-            Switch to Navigate
+            Touch to Navigate
           </Text>
           <Image
             source={require('../assets/images/ellipse.png')}

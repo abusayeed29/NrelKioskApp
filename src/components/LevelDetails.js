@@ -25,13 +25,15 @@ const LevelDetails = ({route}) => {
           className={
             'absolute z-20 w-full flex-row justify-between items-center px-4 mt-3'
           }>
-          <LinearGradient colors={['#ff9999', '#ff0000', '#ff9999']} className="rounded-3xl p-1 my-3 border-none shadow-lg shadow-white-500/50">
-          <TouchableOpacity
-            onPress={() => navigation.goBack()}
-            style={{}}
-            className="">
-            <ChevronLeftIcon size="28" strokeWidth={2.5} color="white" />
-          </TouchableOpacity>
+          <LinearGradient
+            colors={['#dc2626', '#dc2626', '#dc2626']}
+            className="rounded-3xl p-1 my-3 border-none shadow-lg shadow-white-500/50">
+            <TouchableOpacity
+              onPress={() => navigation.goBack()}
+              style={{}}
+              className="">
+              <ChevronLeftIcon size="28" strokeWidth={2.5} color="white" />
+            </TouchableOpacity>
           </LinearGradient>
         </View>
 
